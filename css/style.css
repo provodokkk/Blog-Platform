@@ -1,0 +1,77 @@
+@import url(navbar.css);
+@import url(/css/footer.css);
+
+html, body {
+    height: 100%;
+    font-size: 1rem;
+    font-family: 'Golos Text', sans-serif;
+}
+
+.profile-image {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+}
+
+.gradient {
+    background: rgb(18,12,124);
+    background: linear-gradient(
+        90deg, rgba(18,12,124,1) 0%,
+        rgba(0,0,185,1) 100%
+    );
+    color: #fff;
+}
+
+.header-text {
+    padding-top: 5rem;
+    color: #fff;
+}
+
+.header-img img {
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel-item {
+    transition: transform 0.3s ease-in-out;
+}
+  
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+    transition: opacity 0s 0.5s;
+}
+
+.c-item {
+    height: 35rem;
+}
+
+.c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.feature {
+    background: #000b76;
+    color: #fff;
+}
+
+.about-us-img img {
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+
+    filter: brightness(90%);
+}
+
+.contact {
+    padding-bottom: 1rem;
+}
+
+.contact-img img{
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+}
