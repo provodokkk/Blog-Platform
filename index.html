@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verve</title>
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand navbar-item-text" href="#">Verve</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle navbar-item-text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Settings
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Theme</a></li>
+                            <li><a class="dropdown-item" href="/html/profile_settings.html">Profile settings</a></li>
+                            <li><a class="dropdown-item" href="/html/login.html">Sign out</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#about-us">About us</a></li>
+                        </ul>
+                    </li>
+
+                    <div class="navbar-profile d-flex">
+                        <a href="/html/profile.html"><img src="/img/profile_photo.jpg" class="profile-image mt-1 ms-2"></a>
+                        <a class="nav-link navbar-item-text ms-1" aria-current="page" href="/html/profile.html">Profile</a>
+                    </div>
+                </ul>
+
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header gradient">
+        <div class="container">
+            <div class="row align-items-center justify-content-center py-5">
+                <div class="header-text col-lg-6">
+                    <h2>Verve is</h2>
+                    <p>Find out more interesting things for yourself and share your experience with us!</p>
+                </div>
+
+                <div class="header-img col-lg-6 mt-5">
+                    <img src="/img/conversation.jpg">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article carousel -->
+    <div id="daily-top-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#daily-top-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#daily-top-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#daily-top-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active c-item" data-bs-interval="5000">
+                <img src="https://images.unsplash.com/photo-1579033461380-adb47c3eb938?fit=crop&w=1964&q=100" class="d-block w-100 c-img" alt="Slide 1">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center" style="top: 0">
+                    <h5>Carousel header 1</h5>
+                    <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vitae nemo soluta, doloremque dicta voluptates voluptas, ducimus illo corrupti autem noe deleniti.</p>
+                    <a href="/html/article.html">
+                        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Read</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="carousel-item c-item" data-bs-interval="5000">
+                <img src="https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?fit=crop&w=2134&q=100" class="d-block w-100 c-img" alt="Slide 2">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center" style="top: 0">
+                    <h5>Carousel header 2</h5>
+                    <p class="mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero culpa voluptates veritatis, in possimus molestias? Repellendus iure provident totam laudantium maiores ipsam itaque minus blanditiis unde, quos, cupiditate quia error.</p>
+                    <a href="/html/article.html">
+                        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Read</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="carousel-item c-item" data-bs-interval="5000">
+                <img src="https://images.unsplash.com/photo-1612686635542-2244ed9f8ddc?fit=crop&w=2070&q=100" class="d-block w-100 c-img" alt="Slide 3">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center" style="top: 0">
+                    <h5>Carousel header 3</h5>
+                    <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque optio, pariatur sed omnis temporibus nemo dolorum, nesciunt odit possimus nobis vel, magni quae. Atque recusandae aliquid vitae? Unde, alias reprehenderit?</p>
+                    <a href="/html/article.html">
+                        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Read</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#daily-top-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#daily-top-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Anchor to the "about us" section -->
+    <div id="about-us"></div>
+
+    <div class="wave gradient">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220"><path fill="#000b76" fill-opacity="1" d="M0,32L48,48C96,64,192,96,288,101.3C384,107,480,85,576,112C672,139,768,213,864,213.3C960,213,1056,139,1152,96C1248,53,1344,43,1392,37.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    </div>
+    
+    <!-- "about us" section -->
+    <div  class="feature">
+        <div class="container">
+            <div class="row py-3 align-items-center justify-content-center">
+                
+                <div class="col-xl-6 about-us-img">
+                    <img src="/img/about_us.jpg" alt="">
+                </div>
+
+                <div class="col-xl-6">
+                    <h1>About us</h1>
+                    <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente perferendis earum, fuga sit dolor labore aliquid sunt ad, vero numquam quis repudiandae. Odit vero nobis ullam asperiores rem nisi sit!</p>
+                    <ul>
+                        <li>first</li>
+                        <li>second</li>
+                        <li>third</li>
+                        <li>fourth</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="vawe gradient">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220"><path fill="#000b76" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,112C384,107,480,117,576,138.7C672,160,768,192,864,192C960,192,1056,160,1152,160C1248,160,1344,192,1392,208L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    </div>
+
+    <!-- Feedback section -->
+    <section class="contact gradient">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-xl-6">
+                    <h1>Contact us:</h1>
+
+                    <div class="mb-3">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your questions..."></textarea>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+                
+                <div class="contact-img col-xl-6">
+                    <img src="/img/communication.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid text-center">
+            <span>Created by Provodov Danylo</span>
+        </div>
+    </footer>
+
+    <!-- Load popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+
+    <!-- Load bootstrap.min.js -->
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
