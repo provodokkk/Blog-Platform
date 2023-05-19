@@ -1,0 +1,35 @@
+@import url(navbar.css);
+@import url(footer.css);
+
+html body {
+    background: linear-gradient(
+        90deg, rgba(18,12,124,1) 0%,
+        rgba(0,0,185,1) 100%
+    );
+    font-family: 'Golos Text', sans-serif;
+}
+
+.settings {
+    min-height: 100vh;
+}
+
+.labels {
+    font-size: 11px
+}
+
+.settings-area {
+    background: #3500D3;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.profile-photo img {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    object-fit:cover;
+}
+
+.successMessage {
+    color: darkgreen;
+}

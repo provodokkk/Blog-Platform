@@ -1,0 +1,41 @@
+.navbar {
+    background: #3500D3;
+}
+
+.navbar .navbar-item-text {
+    color: #fff;
+}
+
+.navbar .navbar-item-text:hover {
+    color: #022140;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-profile:hover .navbar-item-text {
+    color: #022140;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar .dropdown-menu {
+    background: #022140;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    background: #022140;
+    color: #fff;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background: #3500D3;
+    color: #fff;
+}
+
+.navbar .dropdown-menu .dropdown-divider {
+    border-top: 1px solid #fff;
+}
+
+.profile-image {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+}

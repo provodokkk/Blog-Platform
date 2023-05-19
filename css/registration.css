@@ -1,0 +1,53 @@
+@import url(footer.css);
+@import url(input_control.css);
+
+html body {
+    background: linear-gradient(
+        90deg, rgba(18,12,124,1) 0%,
+        rgba(0,0,185,1) 100%
+    );
+    font-family: 'Golos Text', sans-serif;
+}
+
+section {
+    min-height: 100vh;
+}
+
+section .card {
+    background-color: #3500D3;
+    color: #fff;
+    border-radius: 25px;
+}
+
+section .form-check a {
+    color: rgb(0, 162, 255);
+}
+
+section .form-check a:hover {
+    color: rgb(151, 162, 207);
+}
+
+section img {
+    border-radius: 25px;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+/* form button {
+    display: flex;
+    justify-content: center;
+    margin: 4rem, 0;
+    margin-bottom: 3rem;
+} */
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 10px;
+	width: 100%;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/profile_settings.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text&display=swap" rel="stylesheet">
+    <title>Verve - Profile Settings</title>
+</head>
+<body>
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand navbar-item-text" href="index.html">Verve</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle navbar-item-text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Settings
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Theme</a></li>
+                            <li><a class="dropdown-item" href="profile_settings.html">Profile settings</a></li>
+                            <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html#about-us">About us</a></li>
+                        </ul>
+                    </li>
+
+                    <div class="navbar-profile d-flex">
+                        <li><a href="profile.html"><img src="img/profile_photo.jpg" class="profile-image mt-1 ms-2"></a></li>
+                        <li><a class="nav-link navbar-item-text ms-1" aria-current="page" href="profile.html">Profile</a></li>
+                    </div>
+                </ul>
+
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Settings card -->
+    <div class="container settings mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="settings-area col-md-8 border-right mt-3">
+                <div class="p-3 py-3">
+
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h4 class="text-right">Profile Settings</h4>
+                    </div>
+                    
+                    <div class="row profile-header">
+                        <div class="col-md-1 me-4">
+                            <div class="profile-photo">
+                                <img src="img/profile_photo.jpg">
+                                <div class="middle-profilepic text-center card-img-overlay d-none flex-column justify-content-center">
+                                    <div class="text-profilepic text-success">
+                                        <i class="fas fa-camera"></i>
+                                        <div class="text-profilepic">Change it</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-7">
+                            <div class="row mt-1">
+                                <div class="col-md-12">
+                                    <button class="btn btn-primary">Change profile photo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-md-12"><label class="labels">Nickname</label><input type="text" id="nickname" class="form-control" placeholder="Nickname" disabled></div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-md-6"><label class="labels">Name</label><input type="text" id="name" class="form-control" placeholder="Name" value=""></div>
+                        <div class="col-md-6"><label class="labels">Surname</label><input type="text" id="surname" class="form-control" value="" placeholder="Surname"></div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="d-flex flex-row align-items-center mb-2">
+                            <div class="form-outline flex-fill">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" checked="checked" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1" >Male</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" id="mobileNumber" class="form-control" placeholder="Mobile Number" value=""></div>
+                        <div class="col-md-12"><label class="labels">Country</label><input type="text" id="country" class="form-control" placeholder="Country" value=""></div>
+                        <div class="col-md-12"><label class="labels">Address</label><input type="text" id="address" class="form-control" placeholder="Address" value=""></div>
+                        <div class="col-md-12"><label class="labels">Email</label><input type="text" id="email" class="form-control" placeholder="Email" disabled></div>
+                        <div class="col-md-12"><label class="labels">Website</label><input type="text" id="website" class="form-control" placeholder="Website" value=""></div>
+                        <div class="col-md-12"><label class="labels">Education</label><input type="text" id="education" class="form-control" placeholder="Education" value=""></div>
+                    </div>
+
+                    <div class="mt-4 text-center">
+                        <button type="submit" id="saveProfile" class="btn btn-primary profile-button">Save Profile</button>
+                        <div class="successMessage" style="display: none;">Saved!</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer-->
+    <footer>
+        <div class="container-fluid text-center">
+            <span>Created by Provodov Danylo</span>
+        </div>
+    </footer>
+
+    <script type="module" src="js/profile_settings_model.js"></script>
+    <script type="module" src="js/profile_settings_controller.js"></script>
+
+    <!-- load popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous" ></script>
+
+    <!-- load bootstrap.min.js -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

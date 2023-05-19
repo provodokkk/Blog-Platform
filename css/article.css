@@ -1,0 +1,52 @@
+@import url(navbar.css);
+@import url(footer.css);
+
+html body {
+    background: linear-gradient(
+        90deg, rgba(18,12,124,1) 0%,
+        rgba(0,0,185,1) 100%
+    );
+    font-family: 'Golos Text', sans-serif;
+}
+
+.profile {
+    margin-top: 4rem;
+}
+
+.profile-nickname a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profile .profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.profile-nickname a:hover {
+    color: #022140;
+}
+
+.card {
+    border-radius: 20px;
+    margin: 10px 0px;
+    padding: 2rem;
+}
+
+.card-comments {
+    padding: 1rem;
+}
+
+.card-body {
+    min-height: 5rem;
+    /* display: -webkit-box; */
+    -webkit-box-orient: horizontal;
+    -webkit-line-clamp: 3;
+    overflow: scroll;
+}
+
+.commenter {
+    display: inline;
+}
