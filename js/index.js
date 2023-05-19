@@ -2,7 +2,7 @@
 export function isUserLogged() {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
-    if(!currentUser.username) {
+    if(!currentUser || !currentUser.username) {
         window.location.href = 'login.html';
         return 0;
     }
