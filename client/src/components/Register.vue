@@ -1,15 +1,4 @@
 <template>
-  <!-- <div> -->
-    <!-- <h1>Register</h1>
-
-    <input type="text" name="email" v-model="email" placeholder="email"/>
-    <br>
-    <input type="password" name="password" v-model="password" placeholder="password" />
-    <br>
-    <div class="error" v-html="error" />
-    <br>
-    <button @click="register">Register</button>
-  </div> -->
   <section>
     <div class="container">
       <div class="row d-flex justify-content-center align-items-center">
@@ -64,11 +53,15 @@
                       </div>
 
                       <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                        <button  @click="register" class="btn btn-primary btn-lg">Register</button>
+                        <button @click="register" class="btn btn-primary btn-lg">Register</button>
                       </div>
 
                       <div class="d-flex justify-content-center mb-5">
-                        <span>Do you already have an account? <a href="login.html">Login</a></span>
+                        <span>Do you already have an account?
+                          <router-link to="login">
+                            <button class="btn btn-primary btn-sm">Login</button>
+                          </router-link>
+                        </span>
                       </div>
 
                     </form>
@@ -103,11 +96,6 @@ export default {
       passwordError: null,
       confirmPasswordError: null,
       defaultError: null
-    }
-  },
-  watch: {
-    email (value) {
-      console.log('Email has changed', value)
     }
   },
   methods: {

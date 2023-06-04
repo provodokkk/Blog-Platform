@@ -15,7 +15,6 @@ module.exports = {
     console.log(value) 
 
     if (error) {
-      // const emptyFieldError = 'This field can not be empty'
       const usernameErrorMessage = 'You must provide valid username'
       const emailErrorMessage = 'You must provide valid email'
       const passwordErrorMessage = `The password provided failed to match the following rules:
