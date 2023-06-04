@@ -40,7 +40,6 @@ module.exports = {
       }
 
       const isPasswordValid = user.comparePassword(`${password}${user.salt}`, user.password)
-      console.log(isPasswordValid)
       if(!isPasswordValid) {
         return res.status(403).send({
           error: 'Invalid password'

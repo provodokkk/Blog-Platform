@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section style="margin-top: -10px;">
     <div class="container">
       <div class="row d-flex justify-content-center align-items-center">
         <div class="col-lg-12 col-xl-11">
@@ -76,9 +76,8 @@
             </div>
           </div>
         </div>
-    </div>
+      </div>
     </section>
-
 </template>
 
 <script>
@@ -101,12 +100,14 @@ export default {
   methods: {
     async register () {
       try {
-        await AuthenticationService.register({
+        const responce = await AuthenticationService.register({
           username: this.username,
           email: this.email,
           password: this.password,
           confirmPassword: this.confirmPassword
         })
+        this.$store.dispatch('setToken', responce.data.token)
+        this.$store.dispatch('setUser', responce.data.user)
       } catch (error) {
         this.usernameError = error.response.data.usernameError
         this.emailError = error.response.data.emailError
@@ -122,5 +123,49 @@ export default {
 <style scoped>
 .error {
   color: red;
+}
+
+html body, section {
+  background: linear-gradient(
+    90deg, rgba(18,12,124,1) 0%,
+    rgba(0,0,185,1) 100%
+  );
+  font-family: 'Golos Text', sans-serif;
+}
+
+section {
+  min-height: 100vh;
+}
+
+section .card {
+  background-color: #3500D3;
+  color: #fff;
+  border-radius: 25px;
+}
+
+section .form-check a {
+  color: rgb(0, 162, 255);
+}
+
+section .form-check a:hover {
+  color: rgb(151, 162, 207);
+}
+
+section img {
+  border-radius: 25px;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
 }
 </style>

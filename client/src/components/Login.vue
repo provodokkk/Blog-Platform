@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section style="margin-top: -10px;">
     <div class="container">
       <div class="row d-flex justify-content-center align-items-center">
         <div class="col-lg-12 col-xl-11">
@@ -57,7 +57,6 @@
       </div>
     </div>
   </section>
-
 </template>
 
 <script>
@@ -76,10 +75,12 @@ export default {
   methods: {
     async login () {
       try {
-        await AuthenticationService.login({
+        const responce = await AuthenticationService.login({
           email: this.email,
           password: this.password
         })
+        this.$store.dispatch('setToken', responce.data.token)
+        this.$store.dispatch('setUser', responce.data.user)
       } catch (error) {
         this.emailError = error.response.data.emailError
         this.passwordError = error.response.data.passwordError
@@ -93,5 +94,36 @@ export default {
 <style scoped>
 .error {
   color: red;
+}
+
+html body, section {
+  background: linear-gradient(
+    90deg, rgba(18,12,124,1) 0%,
+    rgba(0,0,185,1) 100%
+  );
+  font-family: 'Golos Text', sans-serif;
+}
+
+section {
+  min-height: 100vh;
+  height: 100%;
+}
+
+section .card {
+  background-color: #3500D3;
+  color: #fff;
+  border-radius: 25px;
+}
+
+section .form-check a {
+  color: rgb(0, 162, 255);
+}
+
+section .form-check a:hover {
+  color: rgb(151, 162, 207);
+}
+
+section img {
+  border-radius: 25px;
 }
 </style>
