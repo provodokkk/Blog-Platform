@@ -20,5 +20,8 @@ new Vue({
   router,
   store,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  mounted: function() {
+    document.title = 'Verve'
+  }
 })
