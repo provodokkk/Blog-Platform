@@ -73,6 +73,13 @@ export default {
     }
   },
   methods: {
+    navigateTo (route) {
+      const currentPage = this.$router.history.current.name
+      const redirectToPage = route.name
+      if (currentPage !== redirectToPage) {
+        this.$router.push(route)
+      }
+    },
     async login () {
       try {
         const responce = await AuthenticationService.login({
@@ -81,6 +88,7 @@ export default {
         })
         this.$store.dispatch('setToken', responce.data.token)
         this.$store.dispatch('setUser', responce.data.user)
+        this.navigateTo({name: 'root'})
       } catch (error) {
         this.emailError = error.response.data.emailError
         this.passwordError = error.response.data.passwordError

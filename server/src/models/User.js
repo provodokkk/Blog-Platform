@@ -20,8 +20,8 @@ module.exports = (sequelize, DataTypes) => {
       unique: true
     },
     password: DataTypes.STRING,
-    username: DataTypes.STRING,
-    salt: DataTypes.STRING
+    salt: DataTypes.STRING,
+    username: DataTypes.STRING
   }, {
     timestamps: false,
     tableName: 'User',

@@ -9,75 +9,79 @@
                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
                   <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
-                    <form id="form" class="mx-1 mx-md-4">
+                  <form id="form" class="mx-1 mx-md-4">
 
-                      <div class="d-flex flex-row align-items-center mb-4">
-                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                        <div class="input-control form-outline flex-fill mb-0">
-                          <input v-model="username" type="text" id="username" class="form-control" placeholder="Username"/>
-                          <div class="error" v-html="usernameError" />
-                        </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                      <div class="input-control form-outline flex-fill mb-0">
+                        <input v-model="username" type="text" id="username" class="form-control" placeholder="Username" />
+                        <div class="error" v-html="usernameError" />
                       </div>
+                    </div>
 
-                      <div class="d-flex flex-row align-items-center mb-4">
-                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                        <div class="input-control form-outline flex-fill mb-0">
-                          <input v-model="email" type="email" id="email" class="form-control" placeholder="Your Email"/>
-                          <div class="error" v-html="emailError" />
-                        </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div class="input-control form-outline flex-fill mb-0">
+                        <input v-model="email" type="email" id="email" class="form-control" placeholder="Your Email" />
+                        <div class="error" v-html="emailError" />
                       </div>
+                    </div>
 
-                      <div class="d-flex flex-row align-items-center mb-4">
-                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                        <div class="input-control form-outline flex-fill mb-0">
-                          <input v-model="password" type="password" id="password1" class="form-control" placeholder="Password"/>
-                          <div class="error" v-html="passwordError" />
-                        </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="input-control form-outline flex-fill mb-0">
+                        <input v-model="password" type="password" id="password1" class="form-control"
+                          placeholder="Password" />
+                        <div class="error" v-html="passwordError" />
                       </div>
+                    </div>
 
-                      <div class="d-flex flex-row align-items-center mb-4">
-                        <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                        <div class="input-control form-outline flex-fill mb-0">
-                          <input v-model="confirmPassword" type="password" id="password2" class="form-control" placeholder="Repeat your password"/>
-                          <div class="error" v-html="confirmPasswordError" />
-                        </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                      <div class="input-control form-outline flex-fill mb-0">
+                        <input v-model="confirmPassword" type="password" id="password2" class="form-control"
+                          placeholder="Repeat your password" />
+                        <div class="error" v-html="confirmPasswordError" />
                       </div>
+                    </div>
 
-                      <div class="form-check d-flex justify-content-center mb-5">
-                        <input class="form-check-input me-2" type="checkbox" value=""/>
-                        <label class="form-check-label" for="form2Example3">I agree all statements in <a href="#!">Terms of service</a></label>
-                      </div>
+                    <div class="form-check d-flex justify-content-center mb-5">
+                      <input class="form-check-input me-2" type="checkbox" value="" />
+                      <label class="form-check-label" for="form2Example3">I agree all statements in <a href="#!">Terms of
+                          service</a></label>
+                    </div>
 
-                      <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                        <div class="error" v-html="defaultError" />
-                      </div>
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <div class="error" v-html="defaultError" />
+                    </div>
 
-                      <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                        <button @click="register" class="btn btn-primary btn-lg">Register</button>
-                      </div>
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button @click="register" class="btn btn-primary btn-lg">Register</button>
+                    </div>
 
-                      <div class="d-flex justify-content-center mb-5">
-                        <span>Do you already have an account?
-                          <router-link to="login">
-                            <button class="btn btn-primary btn-sm">Login</button>
-                          </router-link>
-                        </span>
-                      </div>
+                    <div class="d-flex justify-content-center mb-5">
+                      <span>Do you already have an account?
+                        <router-link to="login">
+                          <button class="btn btn-primary btn-sm">Login</button>
+                        </router-link>
+                      </span>
+                    </div>
 
-                    </form>
-                  </div>
-
-                  <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp" class="img-fluid" alt="Sample image">
-                  </div>
-
+                  </form>
                 </div>
+
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                    class="img-fluid" alt="Sample image">
+                </div>
+
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -98,6 +102,13 @@ export default {
     }
   },
   methods: {
+    navigateTo (route) {
+      const currentPage = this.$router.history.current.name
+      const redirectToPage = route.name
+      if (currentPage !== redirectToPage) {
+        this.$router.push(route)
+      }
+    },
     async register () {
       try {
         const responce = await AuthenticationService.register({
@@ -108,6 +119,7 @@ export default {
         })
         this.$store.dispatch('setToken', responce.data.token)
         this.$store.dispatch('setUser', responce.data.user)
+        this.navigateTo({name: 'root'})
       } catch (error) {
         this.usernameError = error.response.data.usernameError
         this.emailError = error.response.data.emailError
@@ -125,11 +137,10 @@ export default {
   color: red;
 }
 
-html body, section {
-  background: linear-gradient(
-    90deg, rgba(18,12,124,1) 0%,
-    rgba(0,0,185,1) 100%
-  );
+html body,
+section {
+  background: linear-gradient(90deg, rgba(18, 12, 124, 1) 0%,
+      rgba(0, 0, 185, 1) 100%);
   font-family: 'Golos Text', sans-serif;
 }
 

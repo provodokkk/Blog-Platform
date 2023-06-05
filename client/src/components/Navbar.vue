@@ -4,10 +4,10 @@
       <a @click="navigateTo({name: 'root'})" class="navbar-brand navbar-item-text" href="#">Verve</a>
       <div v-if="$store.state.isUserLoggedIn" class="navbar-profile d-flex">
         <a href="#"><img src="../assets/profile_photo.jpg" class="profile-image"></a>
-        <a class="nav-link navbar-item-text ms-1 mt-1" aria-current="page" href="#">Profile</a>
+        <a @click="navigateTo({name: 'profile'})" class="nav-link navbar-item-text ms-1 mt-1" aria-current="page" href="#">Profile</a>
       </div>
       <a v-scroll-to="'#about-us'" @click="navigateTo({name: 'root'})" class="navbar-item-text">About us</a>
-      <a v-if="$store.state.isUserLoggedIn" class="navbar-item-text" href="#">Profile settings</a>
+      <a v-if="$store.state.isUserLoggedIn" @click="navigateTo({name: 'profile-settings'})" class="navbar-item-text">Profile settings</a>
       <a v-if="$store.state.isUserLoggedIn" @click="logout" class="navbar-item-text" href="#">Sign out</a>
       <a v-if="!$store.state.isUserLoggedIn" @click="navigateTo({name: 'login'})" class="navbar-item-text" href="#">Sign in</a>
     </div>

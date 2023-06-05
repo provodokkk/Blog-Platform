@@ -55,5 +55,46 @@ module.exports = {
     } else {
       next()
     }
+  },
+  login (req, res, next) {
+    const schema = Joi.object({
+      email: Joi.string().email(),
+      password: Joi.string().regex(
+          new RegExp('^[a-zA-Z0-9]{8,32}$')
+      )
+    })
+
+    const {error, value} = schema.validate(req.body)
+    console.log(value) 
+
+    if (error) {
+      const emailErrorMessage = 'You must provide valid email'
+      const passwordErrorMessage = `The password provided failed to match the following rules:
+        <br>
+        1. It must contain ONLY the following characters: lower case, upper case, numerics.
+        <br>
+        2. It must be at least 8 characters in length and not greater than 32 characters in length.
+      `
+      const defaultErorMessage = 'Invalid registration information'
+
+      switch (error.details[0].context.key) {
+        case 'email':
+          res.status(400).send({
+            emailError: emailErrorMessage
+          })
+          break
+        case 'password':
+          res.status(400).send({
+            passwordError: passwordErrorMessage
+          })
+          break
+        default:
+          res.status(400).send({
+            defaultEror: defaultErorMessage
+          })
+      }
+    } else {
+      next()
+    }
   }
 }
