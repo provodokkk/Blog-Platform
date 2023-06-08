@@ -5,7 +5,7 @@ import { isUserLogged } from '../index.js';
 
 class ProfileSettingsController {
     constructor() {
-        const usersData             = JSON.parse(localStorage.getItem('usersData'));
+        const usersData             = JSON.parse(localStorage.getItem('users'));
         const currentUser           = JSON.parse(localStorage.getItem('currentUser'));
 
         const profileSettingsView   = new ProfileSettingsView();
@@ -17,7 +17,6 @@ class ProfileSettingsController {
         document.getElementById('saveProfile').addEventListener('click', function(ev) {
             profileSettingsModel.onClick(ev.target);
             profileSettingsModel.refreshData(usersData, currentUser);
-
         });
 
     }

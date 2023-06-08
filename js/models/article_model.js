@@ -21,13 +21,17 @@ export class ArticleModel {
             replyTo:            '',
         };
 
-        data.commentContainer = document.getElementById('allComments');;
+        data.commentContainer = document.getElementById('allComments');
 
         const marginLeftReplyButton = '4rem';
-        data.replyButton = self.createButton('reply', 'Reply', marginLeftReplyButton);
+        data.replyButton = self.createButton('reply',
+                                             'Reply', 
+                                             marginLeftReplyButton);
 
         const marginLeftDeleteButton = '4rem';
-        data.deleteButton = self.createButton('deleteComment', 'Delete', marginLeftDeleteButton);
+        data.deleteButton = self.createButton('deleteComment',
+                                              'Delete',
+                                              marginLeftDeleteButton);
 
         if(self.hasClass(e.target.parentElement, 'comments')) {
             // add to the main comment chain
@@ -57,11 +61,11 @@ export class ArticleModel {
 
     getCommenterNickname(e, wrapDiv) {
         // nickname of the person you are replying to
-        const parent    = wrapDiv.parentElement
-        let commenter   = ''
+        const parent    = wrapDiv.parentElement;
+        let commenter   = '';
 
         if(e.target.parentElement.className != 'comments') {
-            commenter = parent.querySelector('#commenter').textContent
+            commenter = parent.querySelector('#commenter').textContent;
         }
 
         return commenter;
@@ -74,10 +78,14 @@ export class ArticleModel {
         const textArea                  = self.createTextarea();
 
         const marginLeftAddButton       = '0rem';
-        const addButton                 = self.createButton('addReply', 'Add', marginLeftAddButton);
+        const addButton                 = self.createButton('addReply',
+                                                            'Add',
+                                                            marginLeftAddButton);
 
         const marginLeftCancelButton    = '1rem';
-        const cancelButton              = self.createButton('cancelReply', 'Cancel', marginLeftCancelButton);
+        const cancelButton              = self.createButton('cancelReply',
+                                                            'Cancel',
+                                                            marginLeftCancelButton);
 
         wrapDiv.append(textArea, addButton, cancelButton);
         parentDiv.appendChild(wrapDiv);
@@ -98,14 +106,14 @@ export class ArticleModel {
 
         if(parentMargin == 0) {
             return (parentMargin + 65).toString() + 'px';
-        } else {
-            return 0; 
         }
+        
+        return 0; 
     }
 
     createTextarea() {
         const textArea              = document.createElement('textarea');
-        textArea.className          = "form-control"
+        textArea.className          = "form-control";
         textArea.style.marginRight  = '20px';
         textArea.style.marginTop    = '20px';
 
@@ -121,6 +129,7 @@ export class ArticleModel {
 
     getStyledComment(e, elementId, replyTo) {
         const commentText   = this.getCommentText(e, elementId);
+        this.clearInputField(elementId);
         const commenterName = this.currentUser.username;
         
         return `
@@ -136,21 +145,22 @@ export class ArticleModel {
     }
 
     getCommentText(e, elementId) {
-        let commentText = '';
-
-        if(elementId != '') {
-            commentText = document.getElementById(elementId).value;
-            document.getElementById(elementId).value = '';
-        } else {
-            commentText = e.target.parentElement.firstElementChild.value;
+        if(elementId) {
+            return document.getElementById(elementId).value;
         }
 
-        return commentText;
+        return e.target.parentElement.firstElementChild.value;
+    }
+
+    clearInputField(elementId) {
+        if(elementId) {
+            document.getElementById(elementId).value = '';
+        }
     }
 
     setTemplate() {
         document.getElementById('allComments').innerHTML = localStorage.getItem('template');
-    };
+    }
 
     setOnLocalStorage() {
         localStorage.setItem('template', document.getElementById('allComments').innerHTML);

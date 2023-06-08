@@ -1,49 +1,39 @@
 
 export class NewUser {
     constructor() {
-        this.username       = document.getElementById('username');
-        this.date           = document.getElementById('date');
-        this.email          = document.getElementById('email');
-        this.password1      = document.getElementById('password1');
-        this.password2      = document.getElementById('password2');
-
-        this.usernameValue  = this.username.value.trim();
-        this.dateValue      = this.date.value.trim();
-        this.emailValue     = this.email.value.trim();
-        this.password1Value = this.password1.value.trim();
-        this.password2Value = this.password2.value.trim();
+        this.username           = this.getElementById('username').value.trim();
+        this.date               = this.getElementById('date').value.trim();
+        this.email              = this.getElementById('email').value.trim();
+        this.password           = this.getElementById('password1').value.trim();
+        this.confirmPassword    = this.getElementById('password2').value.trim();
+        this.name               = '';
+        this.surname            = '';
+        this.mobileNumber       = '';
+        this.country            = '';
+        this.address            = '';
+        this.website            = '';
+        this.education          = '';
     }
-}
 
-export class User {
-    constructor(NewUser) {
-        this.username       = NewUser.usernameValue;
-        this.date           = NewUser.dateValue;
-        this.email          = NewUser.emailValue;
-
-        this.name           = '';
-        this.surname        = '';
-        this.mobileNumber   = '';
-        this.country        = '';
-        this.address        = '';
-        this.website        = '';
-        this.education      = '';
+    getElementById(elementId) {
+        return document.getElementById(elementId);
     }
 }
 
 export function setEmptyCurrentUser() {
     const emptyUser = {
-        username:       '',
-        date:           '',
-        email:          '',
-
-        name:           '',
-        surname:        '',
-        mobileNumber:   '',
-        countr:         '',
-        address:        '',
-        website:        '',
-        education:      '',
+        username:           '',
+        date:               '',
+        email:              '',
+        password:           '',
+        confirmPassword:    '',
+        name:               '',
+        surname:            '',
+        mobileNumber:       '',
+        country:            '',
+        address:            '',
+        website:            '',
+        education:          '',
     };
     
     localStorage.setItem('currentUser', JSON.stringify(emptyUser));

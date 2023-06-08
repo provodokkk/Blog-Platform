@@ -1,3 +1,4 @@
+import { setObjectToLocalStorage } from '../localstorage_operations.js'
 
 export class ProfileSettingsModel {
     constructor(setButtonView) {
@@ -55,7 +56,7 @@ export class ProfileSettingsModel {
     }
 
     setOnLocalStorage(usersData, currentUser) {
-        localStorage.setItem('currentUser', JSON.stringify(currentUser));
-        localStorage.setItem('usersData', JSON.stringify(usersData));
+        setObjectToLocalStorage('users', usersData);
+        setObjectToLocalStorage('currentUser', currentUser);
     }
 }
